@@ -1,5 +1,7 @@
 require 'colored'
+
 class View
+
   def self.welcome
     system 'clear'
     puts "*" * 125
@@ -12,11 +14,21 @@ class View
   def self.prompt
     puts "Please enter your borough: ".bold.red
   end
+
   def self.invalid
     puts "This is not a valid borough!".bold.magenta
   end
+
   def self.get_input
     gets.chomp
+  end
+
+  def self.select
+    puts "Please select a location from the list by typing the number"
+  end
+
+  def self.bronx
+    puts "Sorry, there are no food drop locations in DA Bronx! The closest would be in Manhattan.".bold.magenta
   end
 
 end

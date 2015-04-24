@@ -1,5 +1,7 @@
 require_relative 'model'
 require_relative 'view'
+control = FoodDropLocation.new('drop_off.csv')
+
 
 View.welcome
 View.prompt
@@ -7,16 +9,18 @@ View.prompt
 borough = View.get_input
 
 if borough == 'BK'
-  #do whatever
+  control.brooklyn
+
+
 elsif borough == "MN"
-  #do whatever
+  control.manhattan
 elsif borough == "QN"
-  #do whatever
+  control.queens
 elsif borough == "SI"
-  #do whatever
+  control.staten_island
+elsif borough == "BX"
+  View.bronx
 else
   View.invalid
-
-
 end
 
