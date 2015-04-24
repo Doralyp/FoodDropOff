@@ -13,6 +13,7 @@ class View
 
 
 
+
   def self.prompt
     puts "Please enter your borough's abbreviation: ".bold.blue
     puts " Brooklyn: BK \n Manhattan: MN \n Queens: QN \n Staten Island: SI \n DA Bronx: BX \n".blue
@@ -36,6 +37,14 @@ class View
 
   def self.options
     puts "Which location would you like more info on?".blue
+  end
+
+  def to_s
+
+  end
+
+  def self.goodbye
+    puts "Thanks for using our program and being a part of the solution. Just so you know, approximately 40% of the food in the US ends up in landfills!".bold.green
   end
 
 end

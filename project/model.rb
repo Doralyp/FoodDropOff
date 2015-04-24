@@ -7,49 +7,57 @@ class FoodDropLocation
     @file = parsing(file)
   end
 
-  def brooklyn
+  def brooklyn(index = nil)
     count = 1
-    bk_arr = @file.select do |row|
-      row[:borough] == "BK"
+    if index == nil
+      bk_arr = @file.select { |row| row[:borough] == "BK"}
+      bk_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
+        count += 1
+      end
+    else
+      bk_arr = @file.select { |row| row[:borough] == "BK"}
+      bk_arr[index].each_pair {|key, value| puts "#{key}: #{value}"}
     end
-    bk_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
-      count += 1
-    end
-
   end
 
-  def manhattan
+  def manhattan(index = nil)
     count = 1
-    mn_arr = @file.select do |row|
-      row[:borough] == "MN"
+    if index == nil
+      mn_arr = @file.select {|row| row[:borough] == "MN"}
+      mn_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
+        count += 1
+      end
+    else
+      mn_arr = @file.select { |row| row[:borough] == "MN"}
+      mn_arr[index].each_pair {|key, value| puts "#{key}: #{value}"}
     end
-    mn_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
-      count += 1
-    end
-
   end
 
-  def queens
+  def queens(index = nil)
     count = 1
-    qn_arr = @file.select do |row|
-      row[:borough] == "QN"
-    end
-    qn_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
-      count += 1
-    end
+    if index == nil
+      qn_arr = @file.select{|row| row[:borough] == "QN"}
+      qn_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
+        count += 1
+      end
+    else
+      qn_arr = @file.select { |row| row[:borough] == "QN"}
+      qn_arr[index].each_pair {|key, value| puts "#{key}: #{value}"}
 
-
+    end
   end
 
-  def staten_island
+  def staten_island(index = nil)
     count = 1
-    si_arr = @file.select do |row|
-      row[:borough] == "SI"
+    if index == nil
+      si_arr = @file.select {|row| row[:borough] == "SI"}
+      si_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
+        count += 1
+      end
+    else
+    si_arr = @file.select { |row| row[:borough] == "SI"}
+      si_arr[index].each_pair {|key, value| puts "#{key}: #{value}"}
     end
-    si_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
-      count += 1
-    end
-
   end
 
 end
