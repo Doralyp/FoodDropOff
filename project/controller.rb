@@ -10,8 +10,6 @@ borough = View.get_input
 
 if borough == 'BK'
   control.brooklyn
-
-
 elsif borough == "MN"
   control.manhattan
 elsif borough == "QN"
@@ -23,4 +21,6 @@ elsif borough == "BX"
 else
   View.invalid
 end
+
+View.options
 

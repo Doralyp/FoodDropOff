@@ -12,7 +12,7 @@ class FoodDropLocation
     bk_arr = @file.select do |row|
       row[:borough] == "BK"
     end
-    bk_arr.each do|location| puts "#{count}. #{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
+    bk_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
       count += 1
     end
 
@@ -23,7 +23,7 @@ class FoodDropLocation
     mn_arr = @file.select do |row|
       row[:borough] == "MN"
     end
-    mn_arr.each do|location| puts "#{count}. #{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
+    mn_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
       count += 1
     end
 
@@ -34,7 +34,7 @@ class FoodDropLocation
     qn_arr = @file.select do |row|
       row[:borough] == "QN"
     end
-    qn_arr.each do|location| puts "#{count}. #{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
+    qn_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
       count += 1
     end
 
@@ -46,7 +46,7 @@ class FoodDropLocation
     si_arr = @file.select do |row|
       row[:borough] == "SI"
     end
-    si_arr.each do|location| puts "#{count}. #{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
+    si_arr.each do|location| puts "\n#{count}.)#{location[:name]} \n #{location[:location]}".gsub!(/\(([^\)]+)\)/, " ")
       count += 1
     end
 
